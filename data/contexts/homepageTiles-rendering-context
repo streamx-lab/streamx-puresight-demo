@@ -1,0 +1,8 @@
+{
+  "rendererKey": "templates/products-homepage-tiles.html",
+  "dataKeyMatchPattern": "collected_products_.*",
+  "dataTypeMatchPattern": null,
+  "outputKeyTemplate": "/_fragments/{{key}}.hometiles.html",
+  "outputTypeTemplate": "fragment/products-tiles",
+  "outputFormat": "FRAGMENT"
+}

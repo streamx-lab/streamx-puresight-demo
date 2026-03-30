@@ -1,7 +1,7 @@
 {
   "specversion": "1.0",
   "id": "Accent Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Accent Furniture",
@@ -14,7 +14,7 @@
 {
   "specversion": "1.0",
   "id": "Bar & Serving Carts",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bar & Serving Carts",
@@ -27,7 +27,7 @@
 {
   "specversion": "1.0",
   "id": "Bar Cabinets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bar Cabinets",
@@ -40,7 +40,7 @@
 {
   "specversion": "1.0",
   "id": "Bar Sets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bar Sets",
@@ -53,7 +53,7 @@
 {
   "specversion": "1.0",
   "id": "Barstools",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Barstools",
@@ -66,7 +66,7 @@
 {
   "specversion": "1.0",
   "id": "Bed Frames",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bed Frames",
@@ -79,7 +79,7 @@
 {
   "specversion": "1.0",
   "id": "Bedroom Armoires",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bedroom Armoires",
@@ -92,7 +92,7 @@
 {
   "specversion": "1.0",
   "id": "Bedroom Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bedroom Furniture",
@@ -105,7 +105,7 @@
 {
   "specversion": "1.0",
   "id": "Beds",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Beds",
@@ -118,7 +118,7 @@
 {
   "specversion": "1.0",
   "id": "Beds, Frames & Bases",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Beds, Frames & Bases",
@@ -131,7 +131,7 @@
 {
   "specversion": "1.0",
   "id": "Bookcases",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bookcases",
@@ -144,7 +144,7 @@
 {
   "specversion": "1.0",
   "id": "Bookcases, Cabinets & Shelves",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Bookcases, Cabinets & Shelves",
@@ -157,7 +157,7 @@
 {
   "specversion": "1.0",
   "id": "Box Springs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Box Springs",
@@ -170,7 +170,7 @@
 {
   "specversion": "1.0",
   "id": "Buffets & Sideboards",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Buffets & Sideboards",
@@ -183,7 +183,7 @@
 {
   "specversion": "1.0",
   "id": "Chairs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Chairs",
@@ -196,7 +196,7 @@
 {
   "specversion": "1.0",
   "id": "Chaise Lounges",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Chaise Lounges",
@@ -209,7 +209,7 @@
 {
   "specversion": "1.0",
   "id": "China Cabinets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:China Cabinets",
@@ -222,7 +222,7 @@
 {
   "specversion": "1.0",
   "id": "Coffee Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Coffee Tables",
@@ -235,7 +235,7 @@
 {
   "specversion": "1.0",
   "id": "Dressers",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Dressers",
@@ -248,7 +248,7 @@
 {
   "specversion": "1.0",
   "id": "End Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:End Tables",
@@ -261,7 +261,7 @@
 {
   "specversion": "1.0",
   "id": "Entryway Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Entryway Furniture",
@@ -274,7 +274,7 @@
 {
   "specversion": "1.0",
   "id": "Featured",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Featured",
@@ -287,7 +287,7 @@
 {
   "specversion": "1.0",
   "id": "Folding Chairs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Folding Chairs",
@@ -300,7 +300,7 @@
 {
   "specversion": "1.0",
   "id": "Folding Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Folding Tables",
@@ -313,7 +313,7 @@
 {
   "specversion": "1.0",
   "id": "Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Furniture",
@@ -326,7 +326,7 @@
 {
   "specversion": "1.0",
   "id": "Gliders",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Gliders",
@@ -339,7 +339,7 @@
 {
   "specversion": "1.0",
   "id": "Headboards",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Headboards",
@@ -352,7 +352,7 @@
 {
   "specversion": "1.0",
   "id": "Home Bar Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Bar Furniture",
@@ -365,7 +365,7 @@
 {
   "specversion": "1.0",
   "id": "Home Office Cabinets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Office Cabinets",
@@ -378,7 +378,7 @@
 {
   "specversion": "1.0",
   "id": "Home Office Chairs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Office Chairs",
@@ -391,7 +391,7 @@
 {
   "specversion": "1.0",
   "id": "Home Office Desk Chairs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Office Desk Chairs",
@@ -404,7 +404,7 @@
 {
   "specversion": "1.0",
   "id": "Home Office Desks",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Office Desks",
@@ -417,7 +417,7 @@
 {
   "specversion": "1.0",
   "id": "Home Office Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Home Office Furniture",
@@ -430,7 +430,7 @@
 {
   "specversion": "1.0",
   "id": "Kids' Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Kids' Furniture",
@@ -443,7 +443,7 @@
 {
   "specversion": "1.0",
   "id": "Kitchen & Dining Room Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Kitchen & Dining Room Furniture",
@@ -456,7 +456,7 @@
 {
   "specversion": "1.0",
   "id": "Kitchen Islands & Carts",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Kitchen Islands & Carts",
@@ -469,7 +469,7 @@
 {
   "specversion": "1.0",
   "id": "Living Room Furniture",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Living Room Furniture",
@@ -482,7 +482,7 @@
 {
   "specversion": "1.0",
   "id": "Living Room Sets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Living Room Sets",
@@ -495,7 +495,7 @@
 {
   "specversion": "1.0",
   "id": "Mattresses",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Mattresses",
@@ -508,7 +508,7 @@
 {
   "specversion": "1.0",
   "id": "Mattresses & Box Springs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Mattresses & Box Springs",
@@ -521,7 +521,7 @@
 {
   "specversion": "1.0",
   "id": "Media Storage",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Media Storage",
@@ -534,7 +534,7 @@
 {
   "specversion": "1.0",
   "id": "Nesting Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Nesting Tables",
@@ -547,7 +547,7 @@
 {
   "specversion": "1.0",
   "id": "Nightstands",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Nightstands",
@@ -560,7 +560,7 @@
 {
   "specversion": "1.0",
   "id": "Ottomans",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Ottomans",
@@ -573,7 +573,7 @@
 {
   "specversion": "1.0",
   "id": "Recliners",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Recliners",
@@ -586,7 +586,7 @@
 {
   "specversion": "1.0",
   "id": "Sofa & Console Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Sofa & Console Tables",
@@ -599,7 +599,7 @@
 {
   "specversion": "1.0",
   "id": "Sofas",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Sofas",
@@ -612,7 +612,7 @@
 {
   "specversion": "1.0",
   "id": "Sofas & Couches",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Sofas & Couches",
@@ -625,7 +625,7 @@
 {
   "specversion": "1.0",
   "id": "Storage Benches",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Storage Benches",
@@ -638,7 +638,7 @@
 {
   "specversion": "1.0",
   "id": "Storage Cabinets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Storage Cabinets",
@@ -651,7 +651,7 @@
 {
   "specversion": "1.0",
   "id": "Storage Chests",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Storage Chests",
@@ -664,7 +664,7 @@
 {
   "specversion": "1.0",
   "id": "Table & Chair Sets",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Table & Chair Sets",
@@ -677,7 +677,7 @@
 {
   "specversion": "1.0",
   "id": "Table Benches",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Table Benches",
@@ -690,7 +690,7 @@
 {
   "specversion": "1.0",
   "id": "Tables",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Tables",
@@ -703,7 +703,7 @@
 {
   "specversion": "1.0",
   "id": "Television Stands & Entertainment Centers",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Television Stands & Entertainment Centers",
@@ -716,7 +716,7 @@
 {
   "specversion": "1.0",
   "id": "Vanities",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Vanities",
@@ -729,7 +729,7 @@
 {
   "specversion": "1.0",
   "id": "Vanities & Vanity Benches",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Vanities & Vanity Benches",
@@ -742,7 +742,7 @@
 {
   "specversion": "1.0",
   "id": "Vanity Benches",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Vanity Benches",
@@ -755,7 +755,7 @@
 {
   "specversion": "1.0",
   "id": "Video Game Chairs",
-  "source": "streamx-commerce-accelerator",
+  "source": "demo-puresight-starter",
   "type": "com.streamx.blueprints.data.published.v1",
   "datacontenttype": "application/json",
   "subject": "cat:Video Game Chairs",

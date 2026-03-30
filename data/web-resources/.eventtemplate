@@ -4,7 +4,7 @@
   "source": "streamx-cli",
   "type": "com.streamx.blueprints.web-resource.published.v1",
   "datacontenttype": "application/json",
-  "subject": "/${relativePath:2}",
+  "subject": "/${relativePath:1}",
   "time": "2026-01-01T00:00:00.000000Z",
   "data": { "content": "file://${payloadPath}", "type": "web-resource/static" }
 }

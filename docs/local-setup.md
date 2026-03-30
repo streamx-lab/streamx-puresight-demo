@@ -18,7 +18,7 @@ As a prerequisite, ensure that you have StreamX CLI installed in latest preview 
    functionality only that allows to run on limited resources.
 
 2. **Setup ingestion token**
-   Run command print ingestion token that needs to be set for streamx command ```streamx settings set streamx.ingestion.auth-token THE_VALUE_FROM run command```
+   Run command print ingestion token that needs to be set for streamx command ```streamx settings set streamx.ingestion.auth.token THE_VALUE_FROM run command```
 3. **Publish All Resources**
 
    Use the `publish-all` script to deploy all necessary data to StreamX:

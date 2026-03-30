@@ -1,75 +1,108 @@
-# StreamX Commerce Accelerator
+# PureSight Demo
 
-This repository provides a **Commerce Accelerator built on StreamX**, designed to quickly deliver a fully functional e-commerce frontend powered by a **microservices-based mesh architecture**.
+This repository provides the **PureSight Demo**, a showcase e-commerce experience built on **StreamX**, designed to demonstrate the platform’s capabilities in real-world scenarios.
 
-The accelerator enables you to **launch an e-commerce experience with minimal or no custom development**, while still allowing full flexibility through integration with your own data sources (e.g. PIM systems).
+Unlike the base accelerator, this project comes with **PureSight branding** and **pre-integrated data sources**, enabling a richer, production-like demonstration environment out of the box.
 
 ---
 
 # Overview
 
-The StreamX Commerce Accelerator delivers:
+PureSight Demo demonstrates how StreamX enables:
 
-* A ready-to-use **e-commerce frontend architecture**
-* A **microservices mesh** 
-* Built-in support for:
+* **Multi-source content orchestration**
+* **Dynamic data aggregation from multiple systems**
+* **Composable, microservices-based frontend architecture**
 
-    * **Product Detail Pages (PDP)**
-    * **Product Category Pages (PCP)**
-    * **Search and filtering (faceted search)**
+The project is preconfigured to work with:
 
-The system is designed to work with **external data sources**, allowing you to plug in your own **Product Information Management (PIM)** system.
+* **AEM (Adobe Experience Manager)**
+* **EDS (Edge Delivery Services)**
 
----
-
-# Key Features
-
-## Dynamic Commerce Pages
-
-The accelerator provides out-of-the-box support for:
-
-* **Product Detail Pages (PDP)** — dynamically rendered product views
-* **Product Category Pages (PCP)** — dynamically rendered category views
-* **Product Listings** — product listings
-* **Static pages** — CMS-like content support
-
-Dynamic pages are generated based on ingested data.
+This allows you to explore how content and commerce data can be unified into a single experience.
 
 ---
 
-## Search & Faceted Filtering
+# Key Capabilities
+
+## Multi-Source Data Aggregation
+
+PureSight Demo highlights StreamX’s ability to:
+
+* Ingest data from **multiple independent sources**
+* Aggregate and unify content into a single model
+* Resolve conflicts and combine data dynamically
+
+---
+
+## Dynamic Commerce & Content Pages
+
+The demo provides out-of-the-box support for:
+
+* **Product Detail Pages (PDP)** — dynamically generated from aggregated data
+* **Product Category Pages (PCP)** — powered by multiple content sources
+* **Product Listings** — enriched with external data
+* **Static / CMS pages** — delivered from systems like AEM
+
+All pages are generated dynamically based on ingested and merged data.
+
+---
+
+## Search & Discovery
 
 Built-in search capabilities include:
 
-* Indexing of:
-
-    * Products
-    * Categories
-    * Static pages
+* Indexing across **multiple data sources**
 * Full-text search
-* **Faceted search** for filtering products by attributes
+* **Faceted filtering** for product exploration
+* Unified search experience across content and commerce
+
+---
+
+## Dynamic Sitemap Generation
+
+The platform automatically generates:
+
+* **Sitemaps aggregated from multiple sources**
+* URLs for products, categories, and content pages
+* A unified structure regardless of origin system
 
 ---
 
 # Architecture Overview
 
 ```
-PIM (emulate or external one)
-     │
-     │ (Cloud Events)
-     ▼
-StreamX Ingestion
-     │
-     ├── Product & Content Storage
-     ├── Search Index
-     └── Delivery Services
-             │
-             ▼
-        E-commerce Frontend
+AEM / EDS / Other Sources
+          │
+          │ (Cloud Events)
+          ▼
+     StreamX Ingestion
+          │
+          ├── Data Aggregation Layer
+          ├── Unified Storage
+          ├── Search Index
+          └── Delivery Services
+                  │
+                  ▼
+          PureSight Frontend
 ```
+
+---
+
+# Purpose
+
+This project serves as a **demonstration of StreamX platform capabilities**, focusing on:
+
+* Multi-source integration
+* Data aggregation and composition
+* Dynamic content generation
+* Unified search and discovery
+* Scalable, composable architecture
 
 ---
 
 # Result
 
-You can launch a fully functional e-commerce site **in a very short time**, with the flexibility to extend and customize as needed.
+With PureSight Demo, you can quickly explore how StreamX enables building **modern, composable digital experiences** powered by multiple systems — without heavy custom integration work.
+
+It is designed to **demonstrate possibilities**, accelerate understanding, and serve as a foundation for further customization.

@@ -241,7 +241,7 @@ descriptors:
         environment:
           QUARKUS_ELASTICSEARCH_HOSTS: ${STREAMX_SERVICE_ID}.opensearch:9201
       opensearch:
-        image: registry.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.16.0
+        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.16.0
         servicePorts:
           - 9201:9201
         volumes:

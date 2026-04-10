@@ -4,6 +4,5 @@ pushd "${SCRIPT_DIR}/../" || exit
 streamx publish events data
 streamx publish stream data/catalog/categories.stream
 streamx publish stream data/catalog/products.stream
-streamx publish stream data/download-requests/scheduled-downloads.stream
 
 popd || exit

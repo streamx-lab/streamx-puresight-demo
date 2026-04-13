@@ -18,7 +18,7 @@ As a prerequisite, ensure that you have StreamX CLI installed in latest preview 
    functionality only that allows to run on limited resources.
 
 2. **Setup ingestion token**
-   Run command print ingestion token that needs to be set for streamx command ```streamx settings set streamx.ingestion.auth.token THE_VALUE_FROM run command```
+   Run command print ingestion token that needs to be set for streamx command ```streamx settings set streamx.ingestion.auth-token THE_VALUE_FROM run command```
 3. **Publish All Resources**
 
    Use the `publish-all` script to deploy all necessary data to StreamX:
@@ -47,12 +47,14 @@ You may choose **any strong password** for the initial admin account.
 To supply these credentials, create the following two files:
 
 * `mesh/secrets/plaintext/opensearch-sink.properties` with content:
+
 ```properties
 quarkus.elasticsearch.username=admin
 quarkus.elasticsearch.password=your-password-here
 ```
 
 * `mesh/secrets/plaintext/opensearch-sink-opensearch.properties` with content:
+
 ```properties
 OPENSEARCH_INITIAL_ADMIN_PASSWORD=your-password-here
 ```
@@ -60,3 +62,18 @@ OPENSEARCH_INITIAL_ADMIN_PASSWORD=your-password-here
 Note: the password value in both files must be identical, as they refer to the same OpenSearch admin account.
 
 ---
+
+### 🔐 Important note about secrets handling
+
+The `plaintext` directory is intended **only for local development purposes**.
+It is used to store unencrypted secrets because local environments typically do not have access to the encryption keys required for secure secret management.
+
+For cloud environments, secrets **must not be stored in plaintext**.
+
+Instead:
+
+* use the `encrypted` directory for production / cloud usage
+* all values in `encrypted` files must be encoded using the official encryption tool available in the Cloud Console
+* only encrypted secrets are deployed and consumed in cloud environments
+
+This ensures that sensitive credentials are never exposed in source control or local configuration when running in production-like environments.

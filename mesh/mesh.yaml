@@ -60,7 +60,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/resource-downloader:3.0.17-native
+        image: ghcr.io/streamx-com/streamx-blueprints/resource-downloader:3.0.17-SNAPSHOT-jvm
         incoming:
           download-requests: {}
         outgoing:
@@ -77,7 +77,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.17-native
+        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.17-SNAPSHOT-jvm
         incoming:
           data: {}
           multivalued-data: {}
@@ -285,7 +285,7 @@ descriptors:
         persistent: true
     containers:
       sink:
-        image: ghcr.io/streamx-hub/streamx-exprimental/streamx-rag-service:latest-jvm
+        image: ghcr.io/streamx-hub/streamx-rag-service:1.0.0-jvm
         incoming:
           resources:
             initState: delta
@@ -727,14 +727,13 @@ edge:
           STREAMX_POSTGRES_URL: jdbc:postgresql://sx-${STREAMX_SERVICE_ID}.postgres:5432/ragdb
         environmentFrom:
           secrets:
-            - "plaintext/open.ai.rag.secrets"
+            - encrypted/open-ai-rag.properties
           configs:
-            - "open-ai-rag.properties"
+            - open-ai-rag.properties
       postgres:
-        environment:
-          POSTGRES_DB: ragdb
-          POSTGRES_USER: raguser
-          POSTGRES_PASSWORD: ragpass
+        environmentFrom:
+          secrets:
+            - encrypted/postgres.properties
         volumesFrom:
           configs:
             - postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

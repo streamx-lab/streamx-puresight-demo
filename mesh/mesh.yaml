@@ -277,6 +277,27 @@ descriptors:
         volumes:
           - repository-volume:/usr/share/nginx/html
 
+  openai-rag-sink:
+    type: edge
+    volumes:
+      pgdata:
+        size: 20Gi
+        persistent: true
+    containers:
+      sink:
+        image: ghcr.io/streamx-hub/streamx-exprimental/streamx-rag-service:latest-jvm
+        incoming:
+          resources:
+            initState: delta
+        servicePorts:
+          - 8085:8080
+      postgres:
+        image: pgvector/pgvector:pg17
+        servicePorts:
+          - 5432:5432
+        volumes:
+          - pgdata:/var/lib/postgresql/data
+
 networking:
   httpRoutes:
     ingestion-route:
@@ -304,6 +325,15 @@ networking:
           backendRefs:
             - name: edge/web-server-sink
               port: 8084
+    openai-rag-route:
+      rules:
+        - matches:
+            - path:
+                type: PathPrefix
+                value: /api
+          backendRefs:
+            - name: edge/openai-rag-sink
+              port: 8085
 sources:
   github:
     outgoing:
@@ -683,3 +713,28 @@ edge:
         volumesFrom:
           configs:
             - nginx_conf/nginx.conf:/etc/nginx/conf.d/default.conf
+
+  openai-rag-sink:
+    descriptor: openai-rag-sink
+    containers:
+      sink:
+        incoming:
+          resources:
+            ref: relay.data
+        environment:
+          QUARKUS_LOG_LEVEL: TRACE
+          QUARKUS_LOG_MIN_LEVEL: TRACE
+          STREAMX_POSTGRES_URL: jdbc:postgresql://sx-${STREAMX_SERVICE_ID}.postgres:5432/ragdb
+        environmentFrom:
+          secrets:
+            - "plaintext/open.ai.rag.secrets"
+          configs:
+            - "open-ai-rag.properties"
+      postgres:
+        environment:
+          POSTGRES_DB: ragdb
+          POSTGRES_USER: raguser
+          POSTGRES_PASSWORD: ragpass
+        volumesFrom:
+          configs:
+            - postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

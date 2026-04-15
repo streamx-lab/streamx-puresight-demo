@@ -274,13 +274,6 @@ networking:
         - matches:
             - path:
                 type: PathPrefix
-                value: /search
-          backendRefs:
-            - name: edge/search-sink
-              port: 8082
-        - matches:
-            - path:
-                type: PathPrefix
                 value: /
           backendRefs:
             - name: edge/web-server-sink

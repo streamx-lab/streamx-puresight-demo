@@ -51,6 +51,24 @@
         </p>
         <hr class="my-4 md:my-6 border-gray-200"/>
         <p class="text-gray-500">
+          Weight:
+          {% for attribute in attributes if attribute.name == 'size' %}
+          {% for value in attribute.values %}
+          {{ value.value }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </p>
+        <hr class="my-4 md:my-6 border-gray-200"/>
+        <p class="text-gray-500">
+          Weight:
+          {% for attribute in attributes if attribute.name == 'shortDescription' %}
+          {% for value in attribute.values %}
+          {{ value.value }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </p>
+        <hr class="my-4 md:my-6 border-gray-200"/>
+        <p class="text-gray-500">
           {{description | raw}}
         </p>
         <hr class="my-4 md:my-6 border-gray-200"/>

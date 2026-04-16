@@ -289,6 +289,8 @@ descriptors:
         incoming:
           resources:
             initState: delta
+        environment:
+          STREAMX_POSTGRES_URL: jdbc:postgresql://${STREAMX_SERVICE_ID}.postgres:5432/ragdb
         servicePorts:
           - 8085:8080
       postgres:
@@ -734,13 +736,10 @@ edge:
         incoming:
           resources:
             ref: outbox.data
-        environment:
-          QUARKUS_LOG_LEVEL: TRACE
-          QUARKUS_LOG_MIN_LEVEL: TRACE
-          STREAMX_POSTGRES_URL: jdbc:postgresql://sx-${STREAMX_SERVICE_ID}.postgres:5432/ragdb
         environmentFrom:
           secrets:
             - encrypted/open-ai-rag.properties
+            - encypted/open-ai-rag-postgres-creds.properties
           configs:
             - open-ai-rag.properties
       postgres:

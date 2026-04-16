@@ -51,21 +51,32 @@
         </p>
         <hr class="my-4 md:my-6 border-gray-200"/>
         <p class="text-gray-500">
-          Weight:
-          {% for attribute in attributes if attribute.name == 'size' %}
-          {% for value in attribute.values %}
-          {{ value.value }}{% if not loop.last %}, {% endif %}
+          <span class="font-bold">Type:</span>
+          {% for attribute in attributes %}
+          {% if attribute.name == "type" %}
+          {% for val in attribute.values %}
+          {{ val.value | default("") }}{% if not loop.last %}, {% endif %}
           {% endfor %}
+          {% endif %}
           {% endfor %}
         </p>
-        <hr class="my-4 md:my-6 border-gray-200"/>
         <p class="text-gray-500">
-          Weight:
-          {% for attribute in attributes if attribute.name == 'shortDescription' %}
-          {% for value in attribute.values %}
-          {{ value.value }}{% if not loop.last %}, {% endif %}
+          <span class="font-bold">Brand:</span>
+          {% for attribute in attributes %}
+          {% if attribute.name == "brand" %}
+          {% for val in attribute.values %}
+          {{ val.value | default("") }}{% if not loop.last %}, {% endif %}
           {% endfor %}
+          {% endif %}
           {% endfor %}
+        </p>
+        <p class="text-gray-500">
+          <span class="font-bold">Weight:</span>
+          {% for attribute in attributes %}{% if attribute.name == "weight" %}{% for val in attribute.values %}{{ val.value }}{% endfor %}{% endif %}{% endfor %}kg
+        </p>
+        <p class="text-gray-500">
+          <span class="font-bold">Size:</span>
+          {% for attr in attributes %}{% if attr.name == "height" %}{% for v in attr.values %}{{ v.value }}{% endfor %}{% endif %}{% endfor %}x{% for attr in attributes %}{% if attr.name == "width" %}{% for v in attr.values %}{{ v.value }}{% endfor %}{% endif %}{% endfor %}x{% for attr in attributes %}{% if attr.name == "length" %}{% for v in attr.values %}{{ v.value }}{% endfor %}{% endif %}{% endfor %} cm
         </p>
         <hr class="my-4 md:my-6 border-gray-200"/>
         <p class="text-gray-500">
@@ -88,10 +99,11 @@
         </button>
         <p class="text-base text-zinc-300 mt-4">
           {% for attribute in attributes %}
-          {{ attribute.label | default(attribute.name | capitalize) }}:
-          {% for value in attribute.values %}
-          {{ value.value | default('') }}{% if not loop.last %}, {% endif %}
+          {% if attribute.name == "keywords" %}
+          {% for val in attribute.values %}
+          {{ val.value | default("") }}{% if not loop.last %}, {% endif %}
           {% endfor %}
+          {% endif %}
           {% endfor %}
         </p>
       </div>

@@ -17,7 +17,7 @@ descriptors:
     type: processing
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/optimized-images-generator:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/optimized-images-generator:3.0.18-native
         incoming:
           incoming-assets: {}
         outgoing:
@@ -30,7 +30,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/local-references-rewriter:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/local-references-rewriter:3.0.18-native
         incoming:
           incoming-pages: {}
           optimized-assets:
@@ -49,7 +49,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.18-native
         incoming:
           data: {}
           multivalued-data: {}
@@ -70,7 +70,7 @@ descriptors:
     type: processing
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/event-converter:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/event-converter:3.0.18-native
         incoming:
           resources: {}
         outgoing:
@@ -83,7 +83,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/rendering-engine:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/rendering-engine:3.0.18-native
         incoming:
           data: {}
           renderers: {}
@@ -114,7 +114,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/composition-engine:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/composition-engine:3.0.18-native
         incoming:
           layouts: {}
           compositions: {}
@@ -140,7 +140,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/data-collector:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/data-collector:3.0.18-native
         incoming:
           data: {}
         outgoing:
@@ -160,7 +160,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/sitemap-generator:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/sitemap-generator:3.0.18-native
         incoming:
           incoming-pages: {}
         outgoing:
@@ -176,7 +176,7 @@ descriptors:
     type: processing
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.18-native
         incoming:
           pages: {}
           fragments: {}
@@ -195,7 +195,7 @@ descriptors:
         persistent: true
     containers:
       sink:
-        image: ghcr.io/streamx-com/streamx-blueprints/opensearch-sink:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/opensearch-sink:3.0.18-native
         incoming:
           indexable-resources:
             initState: delta
@@ -232,7 +232,7 @@ descriptors:
         persistent: true
     containers:
       sink:
-        image: ghcr.io/streamx-com/streamx-blueprints/web-server-sink:3.0.16-native
+        image: ghcr.io/streamx-com/streamx-blueprints/web-server-sink:3.0.18-native
         incoming:
           resources:
             initState: delta

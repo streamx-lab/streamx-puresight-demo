@@ -60,7 +60,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/resource-downloader:3.0.17-SNAPSHOT-jvm
+        image: ghcr.io/streamx-com/streamx-blueprints/resource-downloader:3.0.17-native
         incoming:
           download-requests: {}
         outgoing:
@@ -77,7 +77,7 @@ descriptors:
         size: 5Gi
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.17-SNAPSHOT-jvm
+        image: ghcr.io/streamx-com/streamx-blueprints/json-aggregator:3.0.17-native
         incoming:
           data: {}
           multivalued-data: {}
@@ -212,6 +212,46 @@ descriptors:
           indexable-resources: {}
           indexable-resource-fragments: {}
 
+  opensearch-sink:
+    type: edge
+    volumes:
+      opensearch-data:
+        size: 20Gi
+        persistent: true
+      rocksdb:
+        size: 20Gi
+        persistent: true
+    containers:
+      sink:
+        image: ghcr.io/streamx-com/streamx-blueprints/opensearch-sink:3.0.17-native
+        incoming:
+          indexable-resources:
+            initState: delta
+          indexable-resource-fragments:
+            initState: delta
+        autoRef:
+          - from: indexable-resource-fragments
+            to: indexable-resource-fragments-state
+            using: sync-state
+        servicePorts:
+          - 8082:8080
+        volumes:
+          - opensearch-data:/usr/share/opensearch/data
+          - rocksdb:/var/lib/rocksdb
+        environment:
+          QUARKUS_ELASTICSEARCH_HOSTS: ${STREAMX_SERVICE_ID}.opensearch:9201
+      opensearch:
+        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.16.0
+        servicePorts:
+          - 9201:9201
+        volumes:
+          - opensearch-data:/usr/share/opensearch/data
+        environment:
+          network.host: 0.0.0.0
+          http.port: "9201"
+          discovery.type: single-node
+          DISABLE_SECURITY_PLUGIN: "true"
+
   web-server-sink:
     type: edge
     volumes:
@@ -240,7 +280,7 @@ descriptors:
   openai-rag-sink:
     type: edge
     volumes:
-      pgdata:
+      pgvolume:
         size: 20Gi
         persistent: true
     containers:
@@ -255,8 +295,10 @@ descriptors:
         image: pgvector/pgvector:pg17
         servicePorts:
           - 5432:5432
+        environment:
+          PGDATA: /data/rag-postgres/pgdata
         volumes:
-          - pgdata:/var/lib/postgresql/data
+          - pgvolume:/data/rag-postgres
 
 networking:
   httpRoutes:
@@ -271,6 +313,13 @@ networking:
               port: 8080
     web-server-and-search-route:
       rules:
+        - matches:
+            - path:
+                type: PathPrefix
+                value: /search
+          backendRefs:
+            - name: edge/search-sink
+              port: 8082
         - matches:
             - path:
                 type: PathPrefix
@@ -641,6 +690,27 @@ processing:
             - indexable-resources-producer.properties
 
 edge:
+  search-sink:
+    descriptor: opensearch-sink
+    containers:
+      sink:
+        incoming:
+          indexable-resources:
+            ref: outbox.indexable-resources
+          indexable-resource-fragments:
+            ref: outbox.indexable-resource-fragments
+        volumesFrom:
+          configs:
+            - opensearch/service-init:/deployments/opensearch/service-init/additional
+        environmentFrom:
+          secrets:
+            - encrypted/search-sink.properties
+
+      opensearch:
+        environmentFrom:
+          secrets:
+            - encrypted/search-sink-opensearch.properties
+
   web-server-sink:
     descriptor: web-server-sink
     containers:
@@ -665,6 +735,8 @@ edge:
           resources:
             ref: outbox.data
         environment:
+          QUARKUS_LOG_LEVEL: TRACE
+          QUARKUS_LOG_MIN_LEVEL: TRACE
           STREAMX_POSTGRES_URL: jdbc:postgresql://sx-${STREAMX_SERVICE_ID}.postgres:5432/ragdb
         environmentFrom:
           secrets:

@@ -288,7 +288,7 @@ descriptors:
         image: ghcr.io/streamx-hub/streamx-rag-service:1.0.0-jvm
         incoming:
           resources:
-            initState: delta
+            initState: replay
         environment:
           STREAMX_POSTGRES_URL: jdbc:postgresql://${STREAMX_SERVICE_ID}.postgres:5432/ragdb
         servicePorts:

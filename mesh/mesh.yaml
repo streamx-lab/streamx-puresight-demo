@@ -563,6 +563,22 @@ processing:
           configs:
             - external-references-rewriter.data.properties
 
+  commerce-initial-data-ext-ref-rewriter:
+    descriptor: external-references-rewriter
+    containers:
+      processor:
+        incoming:
+          incoming-resources:
+            ref: inbox.data
+        outgoing:
+          outgoing-resources:
+            ref: relay.data
+          download-requests:
+            ref: relay.download-requests
+        environmentFrom:
+          configs:
+            - external-references-rewriter.initialcontent.properties
+
   resource-downloader:
     descriptor: resource-downloader
     containers:

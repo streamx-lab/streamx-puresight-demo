@@ -5,7 +5,7 @@ defaults:
         cpu: 300m
         memory: 512Mi
   ingestion:
-    replicas: 2
+    replicas: 1
     podDisruptionBudget:
       enabled: true
       minAvailable: 1
@@ -13,7 +13,7 @@ defaults:
     replicas: 1
     stateful: true
   edge:
-    replicas: 2
+    replicas: 1
     stateful: true
     podDisruptionBudget:
       enabled: true
@@ -22,6 +22,7 @@ defaults:
 edge:
   web-server-sink:
     stateful: true
+    replicas: 3
     containers:
       webserver:
         probes:

@@ -1,0 +1,41 @@
+global:
+  services:
+    ingestion:
+      rest-ingestion:
+        replicas: 2
+    processing:
+      pages-optimized-img-rewriter:
+        stateful: true
+      json-aggregator:
+        stateful: true
+      rendering-engine:
+        stateful: true
+      composition-engine:
+        stateful: true
+      data-collector:
+        stateful: true
+      sitemap-generator:
+        stateful: true
+    edge:
+      search-sink:
+        stateful: true
+        replicas: 2
+      web-server-sink:
+        stateful: true
+        replicas: 2
+      openai-rag-sink:
+        stateful: true
+        replicas: 2
+clusters:
+  ca-east-bhs-edge:
+    enabled: true
+  eu-central-waw-edge:
+    enabled: true
+  eu-south-mil-edge:
+    enabled: true
+  eu-west-par-edge:
+    enabled: true
+  eu-west-par-processing:
+    enabled: true
+  streamx-labs-cn-north-bjs-edge:
+    enabled: true

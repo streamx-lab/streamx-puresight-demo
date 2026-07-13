@@ -11,3 +11,7 @@ clusters:
     enabled: true
     overlays:
       properties: {}
+  ca-east-bhs-edge:
+    enabled: true
+    overlays:
+      properties: {}

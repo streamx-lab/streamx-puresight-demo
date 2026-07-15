@@ -39,6 +39,6 @@ clusters:
     overlays:
       properties: {}
   ca-east-bhs-edge:
-    enabled: false
+    enabled: true
     overlays:
       properties: {}

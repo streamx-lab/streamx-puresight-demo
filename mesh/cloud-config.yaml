@@ -1,3 +1,5 @@
+---
+domains: []
 global:
   services:
     ingestion:
@@ -18,18 +20,25 @@ global:
         stateful: true
     edge:
       search-sink:
-        stateful: true
         replicas: 1
+        stateful: true
       web-server-sink:
-        stateful: true
         replicas: 1
+        stateful: true
       openai-rag-sink:
-        stateful: true
         replicas: 1
+        stateful: true
+  properties: {}
 clusters:
   eu-west-gra-processing:
     enabled: true
+    overlays:
+      properties: {}
   eu-west-gra-edge:
     enabled: true
+    overlays:
+      properties: {}
   ca-east-bhs-edge:
-    enabled: true
+    enabled: false
+    overlays:
+      properties: {}

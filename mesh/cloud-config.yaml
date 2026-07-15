@@ -1,17 +1,35 @@
----
-domains: []
 global:
-  properties: {}
+  services:
+    ingestion:
+      rest-ingestion:
+        replicas: 1
+    processing:
+      pages-optimized-img-rewriter:
+        stateful: true
+      json-aggregator:
+        stateful: true
+      rendering-engine:
+        stateful: true
+      composition-engine:
+        stateful: true
+      data-collector:
+        stateful: true
+      sitemap-generator:
+        stateful: true
+    edge:
+      search-sink:
+        stateful: true
+        replicas: 1
+      web-server-sink:
+        stateful: true
+        replicas: 1
+      openai-rag-sink:
+        stateful: true
+        replicas: 1
 clusters:
   eu-west-gra-processing:
     enabled: true
-    overlays:
-      properties: {}
   eu-west-gra-edge:
     enabled: true
-    overlays:
-      properties: {}
   ca-east-bhs-edge:
     enabled: true
-    overlays:
-      properties: {}

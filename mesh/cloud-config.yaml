@@ -31,11 +31,11 @@ global:
   properties: {}
 clusters:
   eu-west-gra-processing:
-    enabled: false
+    enabled: true
     overlays:
       properties: {}
   eu-west-gra-edge:
-    enabled: false
+    enabled: true
     overlays:
       properties: {}
   ca-east-bhs-edge:

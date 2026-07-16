@@ -31,7 +31,7 @@ global:
   properties: {}
 clusters:
   eu-west-gra-processing:
-    enabled: true
+    enabled: false
     overlays:
       properties: {}
   eu-west-gra-edge:

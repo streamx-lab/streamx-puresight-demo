@@ -35,7 +35,7 @@ clusters:
     overlays:
       properties: {}
   eu-west-gra-edge:
-    enabled: true
+    enabled: false
     overlays:
       properties: {}
   ca-east-bhs-edge:

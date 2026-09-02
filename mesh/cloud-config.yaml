@@ -43,6 +43,6 @@ clusters:
     overlays:
       properties: {}
   us-east-chi-edge:
-    enabled: false
+    enabled: true
     overlays:
       properties: {}

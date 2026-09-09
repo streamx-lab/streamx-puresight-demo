@@ -6,6 +6,7 @@ default:
 descriptors:
   relay:
     type: processing
+    serviceUnits: 0.25
     containers:
       service:
         incoming:

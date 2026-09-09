@@ -1,5 +1,4 @@
 ---
-domains: []
 global:
   services:
     ingestion:
@@ -28,21 +27,16 @@ global:
       openai-rag-sink:
         replicas: 1
         stateful: true
-  properties: {}
 clusters:
   eu-west-gra-processing:
     enabled: true
-    overlay:
-      properties: {}
+    overlay: {}
   eu-west-gra-edge:
     enabled: true
-    overlay:
-      properties: {}
+    overlay: {}
   ca-east-bhs-edge:
-    enabled: true
-    overlay:
-      properties: {}
+    enabled: false
+    overlay: {}
   us-east-chi-edge:
     enabled: true
-    overlay:
-      properties: {}
+    overlay: {}

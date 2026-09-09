@@ -35,7 +35,7 @@ clusters:
     enabled: true
     overlay: {}
   ca-east-bhs-edge:
-    enabled: false
+    enabled: true
     overlay: {}
   us-east-chi-edge:
     enabled: true

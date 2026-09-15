@@ -30,13 +30,9 @@ global:
 clusters:
   eu-west-gra-processing:
     enabled: true
-    overlay: {}
   eu-west-gra-edge:
     enabled: true
-    overlay: {}
   ca-east-bhs-edge:
     enabled: true
-    overlay: {}
   us-east-chi-edge:
     enabled: true
-    overlay: {}

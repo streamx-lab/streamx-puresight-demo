@@ -26,6 +26,7 @@ descriptors:
 
   local-references-rewriter:
     type: processing
+    serviceUnits: 0.25
     volumes:
       rocksdb:
         size: 5Gi
@@ -45,6 +46,7 @@ descriptors:
 
   external-references-rewriter:
     type: processing
+    serviceUnits: 0.25
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/external-references-rewriter:3.0.19-native
@@ -73,6 +75,7 @@ descriptors:
 
   json-aggregator:
     type: processing
+    serviceUnits: 0.5
     volumes:
       rocksdb:
         size: 5Gi
@@ -97,6 +100,7 @@ descriptors:
 
   event-converter:
     type: processing
+    serviceUnits: 0.25
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/event-converter:3.0.19-native
@@ -164,6 +168,7 @@ descriptors:
 
   data-collector:
     type: processing
+    serviceUnits: 0.5
     volumes:
       rocksdb:
         size: 5Gi
@@ -203,6 +208,7 @@ descriptors:
 
   indexable-resources-producer:
     type: processing
+    serviceUnits: 0.5
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.19-native
@@ -215,6 +221,7 @@ descriptors:
 
   opensearch-sink:
     type: edge
+    serviceUnits: 8
     volumes:
       opensearch-data:
         size: 20Gi
@@ -276,6 +283,7 @@ descriptors:
 
   openai-rag-sink:
     type: edge
+    serviceUnits: 4
     volumes:
       pgvolume:
         size: 20Gi

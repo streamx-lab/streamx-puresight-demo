@@ -221,7 +221,7 @@ descriptors:
 
   opensearch-sink:
     type: edge
-    serviceUnits: 8
+    serviceUnits: 4
     volumes:
       opensearch-data:
         size: 20Gi

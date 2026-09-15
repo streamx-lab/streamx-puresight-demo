@@ -221,7 +221,7 @@ descriptors:
 
   opensearch-sink:
     type: edge
-    serviceUnits: 4
+    serviceUnits: 2
     volumes:
       opensearch-data:
         size: 20Gi
@@ -283,7 +283,7 @@ descriptors:
 
   openai-rag-sink:
     type: edge
-    serviceUnits: 4
+    serviceUnits: 2
     volumes:
       pgvolume:
         size: 20Gi

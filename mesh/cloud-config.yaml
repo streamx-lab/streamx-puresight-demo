@@ -32,7 +32,7 @@ clusters:
     enabled: true
     overlay: {}
   eu-west-gra-edge:
-    enabled: false
+    enabled: true
     overlay: {}
   ca-east-bhs-edge:
     enabled: true

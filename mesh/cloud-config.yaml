@@ -29,7 +29,7 @@ global:
         stateful: true
 clusters:
   eu-west-gra-processing:
-    enabled: true
+    enabled: false
     overlay: {}
   eu-west-gra-edge:
     enabled: true

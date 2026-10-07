@@ -428,17 +428,6 @@ processing:
           relayed-events:
             ref: relay.fragments
 
-  data-relay:
-    descriptor: relay
-    containers:
-      service:
-        incoming:
-          events:
-            ref: relay.aggregated-data
-        outgoing:
-          relayed-events:
-            ref: outbox.data
-
   outbox-fragments-relay:
     descriptor: relay
     containers:

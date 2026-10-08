@@ -231,7 +231,7 @@ descriptors:
         persistent: true
     containers:
       sink:
-        image: ghcr.io/streamx-com/streamx-blueprints/opensearch-sink:3.0.19-native
+        image: ghcr.io/streamx-com/streamx-blueprints/opensearch-sink:3.0.26-native
         incoming:
           indexable-resources:
             initState: delta

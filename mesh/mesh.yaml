@@ -658,7 +658,7 @@ edge:
           indexable-resources:
             ref: outbox.indexable-resources
           indexable-resource-fragments:
-            ref: outbox.indexable-resource-fragments
+            ref: outbox.indexable-resource-fragments 
         volumesFrom:
           configs:
             - opensearch/service-init:/deployments/opensearch/service-init/additional

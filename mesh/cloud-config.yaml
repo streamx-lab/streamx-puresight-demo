@@ -10,6 +10,3 @@ clusters:
   us-east-chi-edge:
     enabled: true
     overlay: {}
-  eu-west-gva-edge:
-    enabled: false
-    overlay: {}

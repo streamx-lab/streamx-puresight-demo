@@ -16,6 +16,7 @@ descriptors:
 
   optimized-images-generator:
     type: processing
+    serviceUnits: 1.0
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/optimized-images-generator:3.0.19-native
@@ -58,6 +59,7 @@ descriptors:
 
   resource-downloader:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -111,6 +113,7 @@ descriptors:
 
   rendering-engine:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -142,6 +145,7 @@ descriptors:
 
   composition-engine:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -189,6 +193,7 @@ descriptors:
 
   sitemap-generator:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -258,6 +263,7 @@ descriptors:
 
   web-server-sink:
     type: edge
+    serviceUnits: 1.0
     volumes:
       repository-volume:
         size: 20Gi

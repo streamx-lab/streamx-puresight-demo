@@ -16,3 +16,6 @@ clusters:
   ca-east-bhs-edge:
     enabled: true
     overlay: {}
+  us-west-lax-edge:
+    enabled: true
+    overlay: {}

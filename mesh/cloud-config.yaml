@@ -11,5 +11,8 @@ clusters:
     enabled: true
     overlay: {}
   eu-west-gva-edge:
+    enabled: false
+    overlay: {}
+  ca-east-bhs-edge:
     enabled: true
     overlay: {}

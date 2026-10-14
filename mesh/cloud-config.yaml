@@ -1,5 +1,9 @@
 ---
-global: {}
+global:
+  services:
+    edge:
+      web-server-sink:
+        replicas: 2
 clusters:
   eu-west-gra-edge:
     enabled: false

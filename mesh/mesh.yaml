@@ -6,6 +6,7 @@ default:
 descriptors:
   relay:
     type: processing
+    serviceUnits: 0.25
     containers:
       service:
         incoming:
@@ -15,6 +16,7 @@ descriptors:
 
   optimized-images-generator:
     type: processing
+    serviceUnits: 1.0
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/optimized-images-generator:3.0.19-native
@@ -25,6 +27,7 @@ descriptors:
 
   local-references-rewriter:
     type: processing
+    serviceUnits: 0.25
     volumes:
       rocksdb:
         size: 5Gi
@@ -44,6 +47,7 @@ descriptors:
 
   external-references-rewriter:
     type: processing
+    serviceUnits: 0.25
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/external-references-rewriter:3.0.19-native
@@ -55,6 +59,7 @@ descriptors:
 
   resource-downloader:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -72,6 +77,7 @@ descriptors:
 
   json-aggregator:
     type: processing
+    serviceUnits: 0.5
     volumes:
       rocksdb:
         size: 5Gi
@@ -96,6 +102,7 @@ descriptors:
 
   event-converter:
     type: processing
+    serviceUnits: 0.25
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/event-converter:3.0.19-native
@@ -106,6 +113,7 @@ descriptors:
 
   rendering-engine:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -137,6 +145,7 @@ descriptors:
 
   composition-engine:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -163,6 +172,7 @@ descriptors:
 
   data-collector:
     type: processing
+    serviceUnits: 0.5
     volumes:
       rocksdb:
         size: 5Gi
@@ -183,6 +193,7 @@ descriptors:
 
   sitemap-generator:
     type: processing
+    serviceUnits: 1.0
     volumes:
       rocksdb:
         size: 5Gi
@@ -202,6 +213,7 @@ descriptors:
 
   indexable-resources-producer:
     type: processing
+    serviceUnits: 0.5
     containers:
       processor:
         image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.19-native
@@ -214,6 +226,7 @@ descriptors:
 
   opensearch-sink:
     type: edge
+    serviceUnits: 4.0
     volumes:
       opensearch-data:
         size: 20Gi
@@ -237,7 +250,7 @@ descriptors:
         environment:
           QUARKUS_ELASTICSEARCH_HOSTS: ${STREAMX_SERVICE_ID}.opensearch:9201
       opensearch:
-        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.16.0
+        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.19.6
         servicePorts:
           - 9201:9201
         volumes:
@@ -246,10 +259,11 @@ descriptors:
           network.host: 0.0.0.0
           http.port: "9201"
           discovery.type: single-node
-          DISABLE_SECURITY_PLUGIN: "true"
+          plugins.security.ssl.http.enabled: "false"
 
   web-server-sink:
     type: edge
+    serviceUnits: 1.0
     volumes:
       repository-volume:
         size: 20Gi
@@ -275,6 +289,7 @@ descriptors:
 
   openai-rag-sink:
     type: edge
+    serviceUnits: 4.0
     volumes:
       pgvolume:
         size: 20Gi

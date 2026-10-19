@@ -1,0 +1,14 @@
+POST /default/_update_by_query?conflicts=proceed&refresh=false
+Content-Type: application/json
+
+{
+  "query": {
+    "regexp": {
+      "type.keyword": ".*product.*"
+    }
+  },
+  "script": {
+    "lang": "painless",
+    "source": "if (ctx._source.payload != null && ctx._source.payload.name instanceof String) { String uppercaseName = ctx._source.payload.name.toUpperCase(); if (uppercaseName == ctx._source.payload.name) { ctx.op = 'noop'; } else { ctx._source.payload.name = uppercaseName; } } else { ctx.op = 'noop'; }"
+  }
+}

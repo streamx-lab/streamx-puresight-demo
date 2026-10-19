@@ -1,0 +1,12 @@
+POST /default/_update_by_query?conflicts=proceed&refresh=false
+Content-Type: application/json
+
+{
+  "query": {
+    "match_all": {}
+  },
+  "script": {
+    "lang": "painless",
+    "source": "ctx.op = 'noop'"
+  }
+}

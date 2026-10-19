@@ -1,26 +1,12 @@
 ---
-global:
-  services:
-    edge:
-      web-server-sink:
-        stateful: true
-        replicas: 2
-      search-sink:
-        stateful: true
-        replicas: 2
+global: {}
 clusters:
-  eu-west-gra-edge:
-    enabled: false
+  ca-east-bhs-edge:
+    enabled: true
     overlay: {}
   eu-west-gra-processing:
     enabled: true
     overlay: {}
   us-east-chi-edge:
-    enabled: true
-    overlay: {}
-  eu-west-gva-edge:
-    enabled: false
-    overlay: {}
-  ca-east-bhs-edge:
     enabled: true
     overlay: {}

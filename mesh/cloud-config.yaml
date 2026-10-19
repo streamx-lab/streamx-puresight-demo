@@ -3,6 +3,10 @@ global:
   services:
     edge:
       web-server-sink:
+        stateful: true
+        replicas: 2
+      search-sink:
+        stateful: true
         replicas: 2
 clusters:
   eu-west-gra-edge:

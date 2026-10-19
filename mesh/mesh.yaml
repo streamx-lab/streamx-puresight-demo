@@ -716,7 +716,6 @@ edge:
         environmentFrom:
           secrets:
             - encrypted/search-sink.properties
-
       opensearch:
         environmentFrom:
           secrets:

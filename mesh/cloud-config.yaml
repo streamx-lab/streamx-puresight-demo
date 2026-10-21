@@ -7,7 +7,8 @@ global:
         replicas: 1
       search-sink:
         volumes:
-          opensearch-data: 21Gi
+          opensearch-data:
+            size: 21Gi
         serviceUnits:
           count: 2.0
         stateful: true

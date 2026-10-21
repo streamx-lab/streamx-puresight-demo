@@ -251,7 +251,7 @@ descriptors:
           QUARKUS_ELASTICSEARCH_HOSTS: ${STREAMX_SERVICE_ID}.opensearch:9201
           TEST: test
       opensearch:
-        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:2.19.6
+        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/opensearchproject/opensearch:3.9.0
         servicePorts:
           - 9201:9201
         volumes:
@@ -282,7 +282,7 @@ descriptors:
         environment:
           STREAMX_BLUEPRINTS_WEB_SERVER_SINK_STORAGE_ROOT_DIRECTORY: /srv/www
       webserver:
-        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/library/nginx:1.26.0
+        image: registry.prod-ext.streamx.cloud/streamx-docker-hub-public-proxy/library/nginx:1.31.6
         servicePorts:
           - 8084:80
         volumes:

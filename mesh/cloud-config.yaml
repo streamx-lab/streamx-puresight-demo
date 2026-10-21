@@ -1,5 +1,16 @@
 ---
-global: {}
+global:
+  services:
+    ingestion:
+      rest-ingestion:
+        replicas: 2
+    edge:
+      search-sink:
+        stateful: true
+        replicas: 2
+      web-server-sink:
+        stateful: true
+        replicas: 2
 clusters:
   ca-east-bhs-edge:
     enabled: true

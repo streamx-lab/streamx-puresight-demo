@@ -9,7 +9,7 @@ global:
         volumes:
           opensearch-data: 21Gi
         serviceUnits:
-          count: 2
+          count: 2.0
         stateful: true
         replicas: 1
 clusters:

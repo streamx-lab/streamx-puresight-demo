@@ -4,10 +4,14 @@ global:
     edge:
       web-server-sink:
         stateful: true
-        replicas: 2
+        replicas: 1
       search-sink:
+        volumes:
+          opensearch-data: 21Gi
+        serviceUnits:
+          count: 2
         stateful: true
-        replicas: 2
+        replicas: 1
 clusters:
   eu-west-gra-edge:
     enabled: false

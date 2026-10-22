@@ -3,16 +3,16 @@ global:
   services:
     edge:
       web-server-sink:
-        stateful: true
         replicas: 1
+        stateful: true
       search-sink:
+        replicas: 1
+        stateful: true
         serviceUnits:
           count: 2.0
-        stateful: true
-        replicas: 1
 clusters:
   eu-west-gra-edge:
-    enabled: false
+    enabled: true
     overlay: {}
   eu-west-gra-processing:
     enabled: true

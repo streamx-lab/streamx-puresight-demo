@@ -33,7 +33,7 @@ As a prerequisite, ensure that you have StreamX CLI installed in latest preview 
     * Homepage: http://edge.127.0.0.1.nip.io/homepage.html
     * Furniture category products with filtering: http://edge.127.0.0.1.nip.io/categories/furniture.html
     * Sample Product page: http://edge.127.0.0.1.nip.io/products/rivet-bristol-natural-edge-black-metal-side-table-walnut-b072zlcb3m.html
-    * Blog page: http://edge.127.0.0.1.nip.io/blog.html
+    * Blog page: http://edge.127.0.0.1.nip.io/articles.html
     * Sitemap: http://edge.127.0.0.1.nip.io/sitemap.xml
     * Search: http://edge.127.0.0.1.nip.io/search/query?query=table
 

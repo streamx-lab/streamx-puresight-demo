@@ -17,12 +17,6 @@ clusters:
   eu-west-gra-processing:
     enabled: true
     overlay: {}
-  us-east-chi-edge:
-    enabled: false
-    overlay: {}
-  eu-west-gva-edge:
-    enabled: false
-    overlay: {}
   ca-east-bhs-edge:
     enabled: true
     overlay: {}

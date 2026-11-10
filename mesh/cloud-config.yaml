@@ -12,11 +12,11 @@ global:
           count: 2.0
 clusters:
   eu-west-gra-edge:
-    enabled: true
+    enabled: false
     overlay: {}
   eu-west-gra-processing:
     enabled: true
     overlay: {}
   ca-east-bhs-edge:
-    enabled: false
+    enabled: true
     overlay: {}

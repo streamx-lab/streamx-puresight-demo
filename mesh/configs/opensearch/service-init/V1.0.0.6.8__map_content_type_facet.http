@@ -1,0 +1,23 @@
+PUT /default/_mapping
+
+{
+  "properties": {
+    "payload": {
+      "properties": {
+        "facets": {
+          "properties": {
+            "content_type_level0": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# Based on streamx-hub/streamx-search-template; selectors follow PureSight EDS HTML.
+streamx:
+  blueprints:
+    indexable-resources-producer:
+      index-fragments: true
+
+      search-feed-extractor:
+        xpath:
+          fields:
+            generic-facets:
+              facet: true
+              element-selector: "//*[local-name()='meta'][starts-with(@property, 'facets:')]"
+              key-selector: "./@property"
+              value-selector: "./@content"
+              key-processors:
+                - name: trim
+                - name: lowercase
+                - name: removeStart
+                  config: "facets:"
+              value-processors:
+                - name: trim
+
+            image:
+              facet: false
+              element-selector: "//*[local-name()='meta'][@property='og:image']"
+              key: image
+              value-selector: "./@content"
+              value-processors:
+                - name: trim
+
+            author:
+              facet: false
+              element-selector: "//*[local-name()='meta'][@name='author']"
+              key: author
+              value-selector: "./@content"
+              value-processors:
+                - name: trim
+
+            # PureSight publishes date, rather than publication_date, in the HTML.
+            publication-date:
+              facet: false
+              element-selector: "//*[local-name()='meta'][@name='date']"
+              key: publication_date
+              value-selector: "./@content"
+              value-processors:
+                - name: trim
+
+            read-time:
+              facet: false
+              element-selector: "//*[local-name()='meta'][@name='read-time']"
+              key: read_time
+              value-selector: "./@content"
+              value-processors:
+                - name: trim

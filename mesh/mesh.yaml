@@ -216,7 +216,7 @@ descriptors:
     serviceUnits: 0.5
     containers:
       processor:
-        image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.22-native
+        image: ghcr.io/streamx-com/streamx-blueprints/indexable-resources-producer:3.0.27-native
         incoming:
           pages: {}
           fragments: {}
@@ -663,9 +663,11 @@ processing:
             ref: outbox.indexable-resources
           indexable-resource-fragments:
             ref: outbox.indexable-resource-fragments
-        environmentFrom:
+        environment:
+          QUARKUS_CONFIG_LOCATIONS: "/deployments/config/application.yaml"
+        volumesFrom:
           configs:
-            - indexable-resources-producer.properties
+            - "indexable-resources-producer.yaml:/deployments/config/application.yaml"
 
 edge:
   search-sink:

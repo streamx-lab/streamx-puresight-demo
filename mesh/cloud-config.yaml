@@ -11,7 +11,7 @@ clusters:
     enabled: true
     overlay: {}
   eu-west-par-edge:
-    enabled: false
+    enabled: true
     overlay: {}
   eu-west-par-processing:
     enabled: true

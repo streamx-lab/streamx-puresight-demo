@@ -2,7 +2,7 @@
 global: {}
 clusters:
   ca-east-bhs-edge:
-    enabled: true
+    enabled: false
     overlay: {}
   eu-west-gra-edge:
     enabled: true

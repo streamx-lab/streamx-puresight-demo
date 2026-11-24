@@ -19,3 +19,6 @@ clusters:
   us-west-lax-edge:
     enabled: false
     overlay: {}
+  eu-south-mil-processing:
+    enabled: true
+    overlay: {}

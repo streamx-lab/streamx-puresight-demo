@@ -20,6 +20,14 @@ streamx:
               value-processors:
                 - name: trim
 
+            first-category:
+              facet: false
+              element-selector: "(//*[local-name()='meta'][@property='facets:category'])[1][count(//*[local-name()='meta'][@property='facets:category']) > 1]"
+              key: first_category
+              value-selector: "./@content"
+              value-processors:
+                - name: trim
+
             image:
               facet: false
               element-selector: "//*[local-name()='meta'][@property='og:image']"

@@ -20,5 +20,5 @@ clusters:
     enabled: false
     overlay: {}
   eu-south-mil-processing:
-    enabled: false
+    enabled: true
     overlay: {}

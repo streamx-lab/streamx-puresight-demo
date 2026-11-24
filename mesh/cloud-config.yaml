@@ -14,11 +14,11 @@ clusters:
     enabled: false
     overlay: {}
   eu-west-par-processing:
-    enabled: true
+    enabled: false
     overlay: {}
   us-west-lax-edge:
     enabled: false
     overlay: {}
   eu-south-mil-processing:
-    enabled: true
+    enabled: false
     overlay: {}

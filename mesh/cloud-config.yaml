@@ -4,18 +4,9 @@ clusters:
   ca-east-bhs-edge:
     enabled: true
     overlay: {}
-  eu-central-waw-edge:
-    enabled: false
-    overlay: {}
-  eu-south-mil-edge:
+  eu-west-gra-edge:
     enabled: true
     overlay: {}
-  eu-west-par-edge:
+  eu-west-gra-processing:
     enabled: true
-    overlay: {}
-  eu-west-par-processing:
-    enabled: true
-    overlay: {}
-  us-west-lax-edge:
-    enabled: false
     overlay: {}

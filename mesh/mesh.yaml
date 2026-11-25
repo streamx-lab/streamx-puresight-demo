@@ -655,7 +655,7 @@ processing:
       processor:
         incoming:
           pages:
-            ref: relay.composed-pages
+            ref: outbox.pages
           fragments:
             ref: relay.fragments
         outgoing:

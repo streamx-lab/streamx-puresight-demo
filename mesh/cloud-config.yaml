@@ -1,9 +1,24 @@
 ---
 global: {}
 clusters:
-  eu-west-par-edge:
+  ca-east-bhs-edge:
     enabled: true
+    overlay: {}
+  eu-central-waw-edge:
+    enabled: false
+    overlay: {}
+  eu-south-mil-edge:
+    enabled: true
+    overlay: {}
+  eu-south-mil-processing:
+    enabled: false
+    overlay: {}
+  eu-west-par-edge:
+    enabled: false
     overlay: {}
   eu-west-par-processing:
     enabled: true
+    overlay: {}
+  us-west-lax-edge:
+    enabled: false
     overlay: {}

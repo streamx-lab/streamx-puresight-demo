@@ -30,9 +30,15 @@ streamx:
 
             image:
               facet: false
-              element-selector: "//*[local-name()='meta'][@property='og:image']"
+              element-selector: >-
+                (//*[local-name()='img'][normalize-space(@src) != '']
+                  [@id='main-image' or ancestor::*[@id='main-image']]/@src)[1]
+                |
+                //*[local-name()='meta'][@property='og:image']
+                  [not(//*[local-name()='img'][normalize-space(@src) != '']
+                    [@id='main-image' or ancestor::*[@id='main-image']])]/@content
               key: image
-              value-selector: "./@content"
+              value-selector: "string(.)"
               value-processors:
                 - name: trim
 
